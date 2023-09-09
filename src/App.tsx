@@ -1,4 +1,6 @@
+import Admin from "./components/Admin";
 import ButtonComponent from "./components/ButtonComponent";
+import ClassCounter from "./components/ClassCounter";
 import Counter from "./components/Counter";
 import Info from "./components/Info";
 
@@ -53,6 +55,9 @@ function App() {
          add me
       </ButtonComponent>
       <Counter />
+
+      <Admin msg="Hi Admin" isUser={true}/>
+      <ClassCounter />
     </>
   );
 }

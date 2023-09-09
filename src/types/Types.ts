@@ -28,3 +28,21 @@ export type counterReducerType = {
   type : "desc" | "inc" | "reset"
   payload? : number
 }
+
+export type adminMsg = {
+  msg : string
+}
+
+export type adminStatus = adminMsg &{
+  isAdmin: boolean,
+  isUser?: never
+}
+
+export type userStatus = adminMsg & {
+  isUser: boolean,
+  isAdmin?: never
+}
+
+export type adminProps = adminStatus | userStatus
+
+
